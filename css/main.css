@@ -159,6 +159,11 @@ p, li {
 
 }
 
+.intro {
+  padding:3em;
+  width:60%;
+}
+
 
 .left-column {
   flex: 1 1 0;
@@ -183,6 +188,152 @@ ul.timeline {
   border-left: 2px solid #020036;
   padding-left: .95em;
 }
+
+
+@keyframes rotate{
+  from{
+    transform:rotateY(0deg) rotateX(90deg) rotateY(0deg);
+  }
+  to{
+    transform:rotateY(-360deg) rotateX(90deg) rotateY(0deg);
+  }
+}
+.illustration-wrap {
+  position:absolute;
+  width:500px;
+  height:500px;
+  margin:0 auto;
+  right:4vw;
+  top:0;
+  perspective: 800px;
+  mix-blend-mode: multiply;
+}
+.zootrope-wrap:hover {
+
+}
+
+.zootrope-wrap {
+  animation-name: rotate;
+  animation-duration:5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform:rotateY(0deg) rotateX(90deg) rotateY(0deg);
+  transform-style:preserve-3d;
+  background:blue;
+  width:500px;
+  height:500px;
+  top:60%;
+  left:60%;
+  postition:absolute;
+}
+
+.zootrope {
+  transform:rotateX(90deg) rotateZ(30deg);
+  transform-style:preserve-3d;
+  width:400px;
+  height:50px;
+  position:relative;
+  top:97%;
+  left:39.5%;
+  transform-origin: 50% 25%;
+  transition:1000ms;
+}
+
+.illustration-wrap:hover .zootrope {
+  transform:rotateX(90deg) rotateZ(0deg);
+}
+.zootrope-center {
+  width:2px;
+  height:2px;
+  background:black;
+  position:absolute;
+  top:50%;
+  left:50%;
+}
+
+.zootrope-panel {
+  transform-style:preserve-3d;
+  background:rgba(2, 0, 54, 0.94);
+  width:100px;
+  height:70px;
+  transform-origin:0% 0%;
+  position:absolute;
+  transform:translateX(110px) rotateY(-24deg)
+}
+
+.zootrope-panel:after {
+  content:"";
+  display:block;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  transform:translateZ(2px) rotate(180deg);
+}
+
+.-panel-1:after {
+  background-image:url(../img/200-1.png);
+}
+
+.-panel-2:after {
+  background-image:url(../img/200-2.png);
+}
+
+.-panel-3:after {
+  background-image:url(../img/200-3.png);
+}
+
+.-panel-4:after {
+  background-image:url(../img/200-4.png);
+}
+
+.-panel-5:after {
+  background-image:url(../img/200-5.png);
+}
+
+.-panel-6:after {
+  background-image:url(../img/200-6.png);
+}
+
+.-panel-7:after {
+  background-image:url(../img/200-7.png);
+}
+
+.-panel-8:after {
+  background-image:url(../img/200-8.png);
+}
+
+.-panel-9:after {
+  background-image:url(../img/200-9.png);
+}
+
+.-panel-10:after {
+  background-image:url(../img/200-10.png);
+}
+
+.-panel-11:after {
+  background-image:url(../img/200-11.png);
+}
+
+.-panel-12:after {
+  background-image:url(../img/200-12.png);
+}
+
+.-panel-13:after {
+  background-image:url(../img/200-13.png);
+}
+
+.-panel-14:after {
+  background-image:url(../img/200-14.png);
+}
+
+.-panel-15:after {
+  background-image:url(../img/200-15.png);
+}
+
+
+
+
+
 
 @media only screen and (max-width: 600px) {
   html {
