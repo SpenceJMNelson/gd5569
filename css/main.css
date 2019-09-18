@@ -144,6 +144,7 @@ a{
   grid-column-gap: 4vw;
   grid-row-gap: 4vw;
   transform: scale(.97);
+  overflow-y: scroll;
 }
 .expanding-nav-overlay > * {
   margin:0;
