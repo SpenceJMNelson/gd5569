@@ -104,6 +104,17 @@ body {
   background: #ffeceb;
 }
 
+body.in-class {
+  font-family: 'Helvetica', sans-serif;
+  color:#020036;
+  background: whitesmoke;
+}
+
+body.in-class img{
+  width:100%;
+  height:auto;
+}
+
 h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
