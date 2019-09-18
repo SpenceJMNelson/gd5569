@@ -141,12 +141,13 @@ a{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 2vw;
+  grid-row-gap: 2vw;
   transform: scale(.97);
 }
 .expanding-nav-overlay > * {
-  align-self:
+  margin:0;
+  padding:0;
 }
 
 .expanding-nav-overlay.nav-open {
