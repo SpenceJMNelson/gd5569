@@ -143,6 +143,7 @@ a{
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  transform: scale(.9);
 }
 .expanding-nav-overlay > * {
   align-self:
@@ -151,6 +152,7 @@ a{
 .expanding-nav-overlay.nav-open {
   opacity:1;
   pointer-events: all;
+  transform: scale(1);
 }
 
 body.in-class {
