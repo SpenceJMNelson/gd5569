@@ -135,6 +135,15 @@ a{
   opacity:0;
   pointer-events: none;
   z-index: 9998;
+  padding:5vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.expanding-nav-overlay > * {
+  align-self:
 }
 
 .expanding-nav-overlay.nav-open {
