@@ -107,7 +107,7 @@ a{
   color: inherit;
 }
 .expanding-nav-overlay-button{
-  padding:2em;
+  padding:1em;
   color:#020036;
   cursor: pointer;
   top:0;
@@ -115,6 +115,8 @@ a{
   position: fixed;
   z-index: 9999;
   display: block;
+  font-size: 24px;
+  transition: 300ms;
 }
 
 .expanding-nav-overlay-button.nav-open{
