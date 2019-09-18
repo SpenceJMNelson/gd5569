@@ -103,6 +103,44 @@ body {
   color:#020036;
   background: #ffeceb;
 }
+a{
+  color: inherit;
+}
+.expanding-nav-overlay-button{
+  padding:2em;
+  color:#020036;
+  cursor: pointer;
+  top:0;
+  left:0;
+  position: fixed;
+  z-index: 9999;
+  display: block;
+}
+
+.expanding-nav-overlay-button.nav-open{
+  color:#ffeceb;
+  transform:rotate(45deg);
+}
+
+.expanding-nav-overlay {
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  position: fixed;
+  background:#020036;
+  color:#ffeceb;
+  z-index: 10000;
+  transition: 300ms;
+  opacity:0;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.expanding-nav-overlay.nav-open {
+  opacity:1;
+  pointer-events: all;
+}
 
 body.in-class {
   font-family: 'Helvetica', sans-serif;
