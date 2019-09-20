@@ -106,6 +106,21 @@ body {
 a{
   color: inherit;
 }
+
+.assignmient-illustration {
+  width:33vw;
+  height:33vw;
+  position: absolute;
+  top:10vh;
+  right:5vw;
+  z-index: -1;
+  opacity:.5;
+}
+
+.assignmient-illustration img{
+  width:100%;
+  height: auto;
+}
 .expanding-nav-overlay-button{
   padding:1em;
   color:#020036;
