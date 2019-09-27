@@ -167,8 +167,13 @@ a{
 }
 
 .expanding-nav-overlay h2, .expanding-nav-overlay h3, .expanding-nav-overlay h4, .expanding-nav-overlay h5 {
-  margin:.3em;
+  margin:0;
+  margin-bottom:.3em;
   padding:0;
+}
+
+.expanding-nav-overlay p{
+  margin:0;
 }
 
 .expanding-nav-overlay.nav-open {
