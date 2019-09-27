@@ -183,6 +183,10 @@ body.in-class img{
   height:auto;
 }
 
+img {
+  max-width: 100%;
+}
+
 h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -259,7 +263,7 @@ p, li {
 }
 
 .right-column {
-
+  max-width: 710px;
   flex: 3 1 0;
 }
 
