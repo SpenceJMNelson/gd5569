@@ -45,6 +45,10 @@
           <li><a href="#timeline">The Timeline</a></li>
           <li><a href="#animating-attributes">Animating Attributes</a></li>
           <li><a href="#masks">Masks</a></li>
+          <li><a href="#parent-link">Parent and link layers</a></li>
+          <li><a href="#pre-compose">Nesting compositions and pre-compose</a></li>
+          <li><a href="#time-remapping">Time remapping compositions</a></li>
+          <li><a href="#easing">Easing</a></li>
         </ul>
       </div>
 
@@ -78,6 +82,40 @@
         <h3 id="masks">Masks</h3>
         <img src="img/kb/kb-fig-5.gif">
         <p><a href="https://drive.google.com/open?id=1m_pol5V3eLixtnwO5C5jcgnFORyqNHpt">After effects file</a> containing examples of masking techniques</p>
+
+        <h3 id="parent-link">Parent and link layers</h3>
+        <p>Setting a layer to be another layer’s parent means that as you transform the parent layer those transforms will also be applied to the child/link layer. Imagine you have a bunch of complex motions applied to several layers. Now imagine you want that group of layers to move left and scale. Instead of trying to update the movements of those individual layers, simply make another layer their parent and move and scale that layer.</p>
+
+        <h3 id="pre-compose">Nesting compositions and pre-compose</h3>
+        <p>Layers in after effects can be things like live shapes or they can be compositions. You can move a group of layers, including all their animated attributes into a new composition by selecting pre-compose in the menu bar. Often it is easier to group a set of elements into a single self-contained composition and create animations there then try and maintain all your animated layers in a single comp. example: let’s say you are animating a character. You might choose to put the head into its own composition allowing you to animate facial features.</p>
+
+        <h3 id="time-remapping">Time remapping compositions</h3>
+        <p>at its most basic, time remapping is a way to change the speed a given movie clip plays in your composition. Enabling time remapping on a layer will automatically add a new attribute with two key frames to that layer, corresponding to the beginning and end of that composition’s content. Dragging the key frames closer together quickens the pace of the clip, while dragging them further apart slows it. You can also add multiple key frames to change the speed of different parts of a video. For example, adding a key frame between the two default time remapping key frames, and moving that new key frame closer to the starting keyframe will make the first half of the video play faster and the latter half play slower.</p>
+        <p>Adding a loopOut() expression to a llayer’s time remapping attribute will loop that layer between those 2 key frames.</p>
+
+        <h3 id="easing">Easing</h3>
+        <p>By default, animations use a linear easing function, meaning that the speed of the animation is constant. To make it so an animation is seen to accelerate from its initial value and decelerate to its end value, select two key frames and hit f9 or select “easing help > easy ease”.</p>
+
+        <h4>Ease (in and out)</h4>
+        <p>Good for when the viewer sees the start and stop. (Animate circle starting and stopping)</p>
+
+        <h4>Ease in</h4>
+        <p>Good for when the viewer only sees the end of a movement (animate ball fading in and stopping)</p>
+
+        <h4>Ease out</h4>
+        <p>Good for when viewer only sees the start of the movement ( animate ball moving and fading out)</p>
+
+        <p>You can also manually edit the speed graph. This can give you a “snappier” movement with a slower start and faster middle.</p>
+
+        <p>Sometimes a motion requires both linear and eased timing. Take a thrown ball for example. The ball will go from left to right at a constant rate, but slow as it ascends and speeds up as it descends.</p>
+
+
+
+        <h3 id="expressions">Expressions</h3>
+        <p>Option-click the stopwatch icon on any attribute to bring up a text box allowing you to write expressions. Expression are based on the javascript.</p>
+        <p>some expressions we've used:</p>
+        <p><code>loopOut();</code> This expression loops through the keyframes on a given attribute.</p>
+        <p><code>wiggle(a,b)</code> This expression randomly assigns values to an attribute with 'a' being the frequency of the values and 'b' the amplitude.</p>
     </div>
   </div>
 </div>
