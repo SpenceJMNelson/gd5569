@@ -97,20 +97,28 @@
         <p>Adding a loopOut() expression to a llayer’s time remapping attribute will loop that layer between those 2 key frames.</p>
 
         <h3 id="easing">Easing</h3>
-        <p>By default, animations use a linear easing function, meaning that the speed of the animation is constant. To make it so an animation is seen to accelerate from its initial value and decelerate to its end value, select two key frames and hit f9 or select “easing help > easy ease”.</p>
+        <p>By default, animations use a <b>linear easing function</b>, meaning that the speed of the animation is constant. </p>
+        <img src="img/kb/linear.gif">
+        <p>To make it so an animation is seen to accelerate from its initial value and decelerate to its end value, select two key frames, control-click the keyframes, navigate to “Keyframe Assistant" and inside that item, select one of the settings below:</p>
 
-        <h4>Ease (in and out)</h4>
-        <p>Good for when the viewer sees the start and stop. (Animate circle starting and stopping)</p>
+        <h4>"Easy Ease"</h4>
+        <p>Note how the circle accelerates and decelerates.</p>
+        <img src="img/kb/ease.gif">
 
-        <h4>Ease in</h4>
-        <p>Good for when the viewer only sees the end of a movement (animate ball fading in and stopping)</p>
+        <h4>"Easy Ease In"</h4>
+        <p>With this setting, the circle starts at speed and decellerates. This setting is good for scenarios when the viewer only sees the end of a movement.</p>
+        <img src="img/kb/ease-in.gif">
 
-        <h4>Ease out</h4>
-        <p>Good for when viewer only sees the start of the movement ( animate ball moving and fading out)</p>
+        <h4>"Easy Ease Out"</h4>
+        <p>With this setting, the circle accellerates and finishes at speed. This setting is good for scenarios when the viewer only sees the beginning of a movement.</p>
+        <img src="img/kb/ease-out.gif">
 
-        <p>You can also manually edit the speed graph. This can give you a “snappier” movement with a slower start and faster middle.</p>
-
-        <p>Sometimes a motion requires both linear and eased timing. Take a thrown ball for example. The ball will go from left to right at a constant rate, but slow as it ascends and speeds up as it descends.</p>
+        <p>You can also manually edit the speed graph by selecting two keyframes and clicking the "graph editor"</p>
+        <img src="img/kb/graph-editor.png">
+        <p>Here's the default "Easy Ease" with its speed graph:</p>
+        <img src="img/kb/ease-graph.gif">
+        <p>And here's the modified graph:</p>
+        <img src="img/kb/ease-modified-graph.gif">
 
 
 
