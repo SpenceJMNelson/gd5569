@@ -16,13 +16,115 @@
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Poppins:400,400i,600,800&display=swap" rel="stylesheet">
 
   <meta name="theme-color" content="#fafafa">
+
+  <style type="text/css">
+  body {
+    background-image: url(img/tiles/Shoshana-Trim-Paths-2.gif);
+    background-size: 50%;
+    transition: 300ms;
+  }
+  a {
+    display:block;
+    margin:1.6666%;
+    width:30%;
+    transition:300ms;
+
+  }
+
+  a:hover {
+
+  }
+
+  a::before {
+    content:"";
+    display: block;
+    position: absolute;
+    width:30%;
+    height: 30%;
+    background: blue;
+    z-index: -1;
+    opacity: .3;
+    transition: 1000ms;
+    filter: blur(15px);
+    transform:translateZ(.1vw);
+  }
+
+  a:hover::before {
+    transition: 300ms;
+    opacity: 0;
+    opacity: .2;
+    filter: blur(25px);
+  }
+  a:hover img{
+    transform:translateZ(5vw);
+    transition: 300ms;
+  }
+  img {
+    width:100%;
+    height:auto;
+    pointer-events: none;
+    transition: 2000ms;
+    transform:translateZ(3vw);
+  }
+  .tileplatform {
+    position:absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    transform-style: preserve-3d;
+    transition: 300ms;
+  }
+
+  .tileplatform-wrapper {
+    transform-style: preserve-3d;
+    perspective: 500px;
+    top:50%;
+    left:50%;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+  }
+
+  </style>
 </head>
 
 <body class="tile-page">
-  <a href="https://drive.google.com/open?id=1sLdMEUdM5fYv6X9Vb9ho3_0RzC7FBrHa"><img src="img/tiles/matt_type.gif"></a>
-  <a href="https://drive.google.com/open?id=1u8Mr_LKpMkG2SvL5g2OFZgTL6c4zXZZD"><img src="img/tiles/SavannahBrogan_LearningTile.gif"></a>
-  <a href="https://drive.google.com/open?id=1Df0tGKKOnu4G_th2v-5rv2ros4ZoOmp0"><img src="img/tiles/SoyeonKwon_learning-Tile.gif"></a>
 
+  <div class="tileplatform-wrapper" data-tilt data-tilt-perspective="4000">
+  <div class="tileplatform">
+  <a data-bg="img/tiles/matt_type.gif" href="https://drive.google.com/open?id=1sLdMEUdM5fYv6X9Vb9ho3_0RzC7FBrHa"><img src="img/tiles/matt_type.gif"></a>
+  <a data-bg="img/tiles/SavannahBrogan_LearningTile.gif" href="https://drive.google.com/open?id=1u8Mr_LKpMkG2SvL5g2OFZgTL6c4zXZZD"><img src="img/tiles/SavannahBrogan_LearningTile.gif"></a>
+  <a data-bg="img/tiles/SoyeonKwon_learning-Tile.gif" href="https://drive.google.com/open?id=1Df0tGKKOnu4G_th2v-5rv2ros4ZoOmp0"><img src="img/tiles/SoyeonKwon_learning-Tile.gif"></a>
+  <a data-bg="img/tiles/Tobin_tile-2.gif" href="https://drive.google.com/open?id=1icrZxEsk2jPQqE2PC0QhiWcClleBPhli"><img src="img/tiles/Tobin_tile-2.gif"></a>
+  <a data-bg="img/tiles/Xing-Mu.gif" href="https://drive.google.com/open?id=1sA3chJqH0hHkmeIpYK1g_qYS6LsJ_6Jc"><img src="img/tiles/Xing-Mu.gif"></a>
+  <a data-bg="img/tiles/Bo-Chen_Learning-Tile.gif" href="https://drive.google.com/open?id=1PKlyKZrP7i11n8SYz4CAb01I9qoGxCcv"><img src="img/tiles/Bo-Chen_Learning-Tile.gif"></a>
+  <a data-bg="img/tiles/Shoshana-Trim-Paths-2.gif" href="https://drive.google.com/open?id=1sA3chJqH0hHkmeIpYK1g_qYS6LsJ_6Jc"><img src="img/tiles/Shoshana-Trim-Paths-2.gif"></a>
+  <a data-bg="img/tiles/C31Lindy.gif" href="#"><img src="img/tiles/C31Lindy.gif"></a>
+  <a data-bg="img/tiles/Tile-BellaHu.gif" href="https://drive.google.com/file/d/16-bPZdTh3gomyW6FaRkIPheKRLPKDC4Z/view?usp=sharing"><img src="img/tiles/Tile-BellaHu.gif"></a>
+  </div>
+</div>
 </body>
+<script src="js/vendor/modernizr-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+<script type="text/javascript">
+$(".tileplatform a").hover(function() {
+	$this = $(this);
+	$("body").css("background-image", "url(" + $(this).data("bg") + ")");
+});
+</script>
 
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
 </html>
